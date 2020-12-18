@@ -60,12 +60,12 @@ def chanvese3d(I,init_mask,max_its=200,alpha=0.2,thresh=0,color='r',display=Fals
             if display:
                 if np.mod(its,10) == 0:            
                     #set(ud.txtInfo1,'string',sprintf('iteration: %d',its),'color',[1 1 0]);
-                    print 'iteration:', its
+                    print ('iteration:', its)
                     showCurveAndPhi(I, phi, color)
 
             else:
                 if np.mod(its,10) == 0:
-                    print 'iteration:', its
+                    print ('iteration:', its)
                     #set(ud.txtInfo1,'string',sprintf('iteration: %d',its),'color',[1 1 0]);
                     #drawnow;
 

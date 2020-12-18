@@ -254,7 +254,7 @@ def sussman_sign(D):
 
 # Convergence Test
 def convergence(p_mask, n_mask, thresh, c):
-    diff = p_mask - n_mask
+    diff = np.logical_xor(p_mask, n_mask)
     n_diff = np.sum(np.abs(diff))
     if n_diff < thresh:
         c = c + 1
@@ -264,7 +264,7 @@ def convergence(p_mask, n_mask, thresh, c):
 
 
 if __name__ == "__main__":
-    img = nd.imread('brain.png', flatten=True)
+    img = plt.imread('brain_n.png')
     mask = np.zeros(img.shape)
     mask[20:100, 20:100] = 1
 
